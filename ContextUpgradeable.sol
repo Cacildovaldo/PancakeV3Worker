@@ -2,7 +2,7 @@
 // OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
 
 pragma solidity ^0.8.0;
-import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Initializable.sol";
+import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
 
 /**
  * @dev Provides information about the current execution context, including the

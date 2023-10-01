@@ -653,3 +653,20 @@ contract AutomatedVaultManager is Initializable, Ownable2StepUpgradeable, Reentr
     }
   }
 }
+function withdrawMinimize(
+    address _vaultToken,
+    uint256 _shareToWithdraw,
+    AutomatedVaultManager.TokenAmount[] calldata _minAmountOut
+) external returns (AutomatedVaultManager.TokenAmount[] memory _result) {
+    // ...
+
+    // Aloque a memória para _actualWithdrawAmount
+    AutomatedVaultManager.TokenAmount[] memory _actualWithdrawAmount = new AutomatedVaultManager.TokenAmount[](_minAmountOut.length);
+
+    // ...
+
+    // Passa _actualWithdrawAmount como argumento para onWithdraw
+    IExecutor(_cachedVaultInfo.executor).onWithdraw(_cachedVaultInfo.worker, _vaultToken, _actualWithdrawAmount);
+
+    // ...
+}

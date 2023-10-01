@@ -1,8 +1,8 @@
 ﻿// SPDX-License-Identifier: BUSL
 pragma solidity 0.8.19;
 
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/ERC20.sol";
-import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/Initializable.sol";
+import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ERC20.sol";
+import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
 
 contract AutomatedVaultERC20 is ERC20, Initializable {
   address public vaultManager;

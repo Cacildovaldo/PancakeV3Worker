@@ -2,23 +2,23 @@
 pragma solidity 0.8.19;
 
 // dependencies
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ERC20.sol";
-import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/SafeTransferLib.sol";
-import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Initializable.sol";
-import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Ownable2StepUpgradeable.sol";
-import { ReentrancyGuardUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ReentrancyGuardUpgradeable.sol";
+import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ERC20.sol";
+import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/SafeTransferLib.sol";
+import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
+import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Ownable2StepUpgradeable.sol";
+import { ReentrancyGuardUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ReentrancyGuardUpgradeable.sol";
 
 // interfaces
-import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/AutomatedVaultManager.sol";
-import { IZapV3 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IZapV3.sol";
-import { ICommonV3Pool } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ICommonV3Pool.sol";
-import { ICommonV3PositionManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ICommonV3PositionManager.sol";
-import { IPancakeV3Router } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IPancakeV3Router.sol";
-import { IPancakeV3MasterChef } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IPancakeV3MasterChef.sol";
+import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/AutomatedVaultManager.sol";
+import { IZapV3 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IZapV3.sol";
+import { ICommonV3Pool } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ICommonV3Pool.sol";
+import { ICommonV3PositionManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ICommonV3PositionManager.sol";
+import { IPancakeV3Router } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IPancakeV3Router.sol";
+import { IPancakeV3MasterChef } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IPancakeV3MasterChef.sol";
 
 // libraries
-import { LibTickMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/LibTickMath.sol";
-import { MAX_BPS } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Constants.sol";
+import { LibTickMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/LibTickMath.sol";
+import { MAX_BPS } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Constants.sol";
 
 contract PancakeV3Worker is Initializable, Ownable2StepUpgradeable, ReentrancyGuardUpgradeable {
   using SafeTransferLib for ERC20;

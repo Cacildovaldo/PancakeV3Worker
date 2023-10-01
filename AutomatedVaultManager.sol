@@ -2,25 +2,25 @@
 pragma solidity 0.8.19;
 
 // dependencies
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IERC20.sol";
-import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/SafeTransferLib.sol";
-import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Initializable.sol";
-import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Ownable2StepUpgradeable.sol";
-import { ReentrancyGuardUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ReentrancyGuardUpgradeable.sol";
-import { ClonesUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ClonesUpgradeable.sol";
+import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IERC20.sol";
+import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/SafeTransferLib.sol";
+import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
+import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Ownable2StepUpgradeable.sol";
+import { ReentrancyGuardUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ReentrancyGuardUpgradeable.sol";
+import { ClonesUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ClonesUpgradeable.sol";
 
 // contracts
-import { AutomatedVaultERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/AutomatedVaultERC20.sol";
-import { BaseOracle } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/BaseOracle.sol";
+import { AutomatedVaultERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/AutomatedVaultERC20.sol";
+import { BaseOracle } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/BaseOracle.sol";
 
 // interfaces
-import { IExecutor } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IExecutor.sol";
-import { IVaultOracle } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IVaultOracle.sol";
-import { IAutomatedVaultERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IAutomatedVaultERC20.sol";
+import { IExecutor } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IExecutor.sol";
+import { IVaultOracle } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IVaultOracle.sol";
+import { IAutomatedVaultERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IAutomatedVaultERC20.sol";
 
 // libraries
-import { LibShareUtil } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/LibShareUtil.sol";
-import { MAX_BPS } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Constants.sol";
+import { LibShareUtil } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/LibShareUtil.sol";
+import { MAX_BPS } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Constants.sol";
 
 contract AutomatedVaultManager is Initializable, Ownable2StepUpgradeable, ReentrancyGuardUpgradeable {
   ///////////////

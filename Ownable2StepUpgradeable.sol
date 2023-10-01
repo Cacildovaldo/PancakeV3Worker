@@ -3,8 +3,8 @@
 
 pragma solidity ^0.8.0;
 
-import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/OwnableUpgradeable.sol";
-import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Initializable.sol";
+import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/OwnableUpgradeable.sol";
+import "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
 
 /**
  * @dev Contract module which provides access control mechanism, where

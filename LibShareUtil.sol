@@ -1,7 +1,7 @@
 ﻿// SPDX-License-Identifier: BUSL
 pragma solidity 0.8.19;
 
-import { LibFullMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/LibFullMath.sol";
+import { LibFullMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/LibFullMath.sol";
 
 library LibShareUtil {
   function shareToValue(uint256 _shareAmount, uint256 _totalValue, uint256 _totalShare) internal pure returns (uint256) {

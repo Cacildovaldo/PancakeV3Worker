@@ -1,8 +1,8 @@
-﻿// SPDX-License-Identifier: BUSL
+// SPDX-License-Identifier: BUSL
 pragma solidity 0.8.19;
 
 // dependencies
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ERC20.sol";
+import { ERC20 } from "@solmate/tokens/ERC20.sol";
 import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/SafeTransferLib.sol";
 import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
 import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Ownable2StepUpgradeable.sol";
@@ -652,21 +652,4 @@ contract AutomatedVaultManager is Initializable, Ownable2StepUpgradeable, Reentr
       revert AutomatedVaultManager_InvalidParams();
     }
   }
-}
-function withdrawMinimize(
-    address _vaultToken,
-    uint256 _shareToWithdraw,
-    AutomatedVaultManager.TokenAmount[] calldata _minAmountOut
-) external returns (AutomatedVaultManager.TokenAmount[] memory _result) {
-    // ...
-
-    // Aloque a memória para _actualWithdrawAmount
-    AutomatedVaultManager.TokenAmount[] memory _actualWithdrawAmount = new AutomatedVaultManager.TokenAmount[](_minAmountOut.length);
-
-    // ...
-
-    // Passa _actualWithdrawAmount como argumento para onWithdraw
-    IExecutor(_cachedVaultInfo.executor).onWithdraw(_cachedVaultInfo.worker, _vaultToken, _actualWithdrawAmount);
-
-    // ...
 }

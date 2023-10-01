@@ -1,8 +1,8 @@
 ﻿// SPDX-License-Identifier: BUSL
 pragma solidity 0.8.19;
 
-import { IMulticall } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IMulticall.sol";
-import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/AutomatedVaultManager.sol";
+import { IMulticall } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IMulticall.sol";
+import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/AutomatedVaultManager.sol";
 
 interface IExecutor is IMulticall {
   function vaultManager() external view returns (address);

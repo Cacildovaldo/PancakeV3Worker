@@ -2,7 +2,7 @@
 pragma solidity 0.8.19;
 
 // dependencies
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IERC20.sol";
+import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/ERC20.sol";
 import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/SafeTransferLib.sol";
 import { Initializable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Initializable.sol";
 import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Ownable2StepUpgradeable.sol";

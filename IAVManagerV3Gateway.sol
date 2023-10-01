@@ -1,7 +1,7 @@
 ﻿// SPDX-License-Identifier: BUSL
 pragma solidity 0.8.19;
 
-import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/AutomatedVaultManager.sol";
+import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/AutomatedVaultManager.sol";
 
 interface IAVManagerV3Gateway {
   error AVManagerV3Gateway_InvalidInput();

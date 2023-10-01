@@ -2,18 +2,18 @@
 pragma solidity 0.8.19;
 
 // dependencies
-import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ERC20.sol";
-import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/SafeTransferLib.sol";
+import { ERC20 } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/ERC20.sol";
+import { SafeTransferLib } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/SafeTransferLib.sol";
 
 // libraries
-import { LibTickMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/LibTickMath.sol";
-import { IWNative } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IWNative.sol";
+import { LibTickMath } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/LibTickMath.sol";
+import { IWNative } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/IWNative.sol";
 
 // interfaces
-import { IAVManagerV3Gateway } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IAVManagerV3Gateway.sol";
-import { ICommonV3Pool } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/ICommonV3Pool.sol";
-import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/AutomatedVaultManager.sol";
-import { PancakeV3Worker } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/PancakeV3Worker.sol";
+import { IAVManagerV3Gateway } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/IAVManagerV3Gateway.sol";
+import { ICommonV3Pool } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/ICommonV3Pool.sol";
+import { AutomatedVaultManager } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/AutomatedVaultManager.sol";
+import { PancakeV3Worker } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/token/PancakeV3Worker.sol";
 
 contract AVManagerV3Gateway is IAVManagerV3Gateway {
   using SafeTransferLib for ERC20;

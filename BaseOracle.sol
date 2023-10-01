@@ -2,11 +2,11 @@
 pragma solidity 0.8.19;
 
 // dependencies
-import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/Ownable2StepUpgradeable.sol";
-import { SafeCastUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/SafeCastUpgradeable.sol";
+import { Ownable2StepUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/Ownable2StepUpgradeable.sol";
+import { SafeCastUpgradeable } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/SafeCastUpgradeable.sol";
 
 // interfaces
-import { IChainlinkAggregator } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/main/IChainlinkAggregator.sol";
+import { IChainlinkAggregator } from "https://github.com/Cacildovaldo/PancakeV3Worker/blob/tokens/IChainlinkAggregator.sol";
 
 abstract contract BaseOracle is Ownable2StepUpgradeable {
   /// Libraries

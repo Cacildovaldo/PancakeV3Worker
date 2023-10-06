@@ -349,10 +349,6 @@ contract AutomatedVaultManager is Initializable, Ownable2StepUpgradeable, Reentr
       IExecutor(_cachedVaultInfo.executor).onWithdraw(_cachedVaultInfo.worker, _vaultToken, _actualWithdrawAmount);
 
     
-    ///////////////////////////
-    // Executor scope closed //
-    ///////////////////////////
-
     uint256 _equityChanged;
     {
       (uint256 _totalEquityAfter,) =

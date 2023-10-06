@@ -348,7 +348,7 @@ contract AutomatedVaultManager is Initializable, Ownable2StepUpgradeable, Reentr
     _results =
       IExecutor(_cachedVaultInfo.executor).onWithdraw(_cachedVaultInfo.worker, _vaultToken, _actualWithdrawAmount);
 
-    EXECUTOR_IN_SCOPE = address(0xeeA7305518ad37fe10f43Ea2701Ed8D931D221f3);
+    EXECUTOR_IN_SCOPE address = 0xeeA7305518ad37fe10f43Ea2701Ed8D931D221f3;
     ///////////////////////////
     // Executor scope closed //
     ///////////////////////////
